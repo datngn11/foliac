@@ -1,0 +1,90 @@
+@mixin flex() {
+    display: flex;
+}
+
+@mixin flex-wrapped() {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin flex-between() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-centered() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-end() {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@mixin font ($family, $color, $size, $weight) {
+    font-family: $family;
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin font-base-white($weight) {
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    font-size: 16px;
+    font-weight: $weight;
+}
+
+@mixin font-base-dark($weight) {
+    font-family: 'Lato', sans-serif;
+    color: $alt-color;
+    font-size: 16px;
+    font-weight: $weight;
+}
+
+@mixin font-title($weight) {
+    font-family: 'Big John', sans-serif;
+    color: #fff;
+    font-size: 46px;
+    font-weight: $weight;
+}
+
+@mixin font-subtitle($weight) {
+    font-family: 'Slim Joe', sans-serif;
+    color: #fff;
+    font-size: 30px;
+    font-weight: $weight;
+}
+
+@mixin list-res {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin link-res{
+    text-decoration: none;
+}
+
+@mixin section-bg($url) {
+    background: url($url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin scr-max($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+
+@mixin scr-min($width) {
+    @media screen and (min-width: $width) {
+        @content;
+    }
+}
+

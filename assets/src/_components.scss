@@ -1,0 +1,32 @@
+.container{
+    @include scr-min(1280px) {
+        width: 1140px;
+    }
+    margin: 0 auto;
+}
+
+.btn{
+    @include link-res;
+    @include font-base-white(700);
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    border: 2px solid;
+    display: inline-block;
+    &--small{
+        padding: 10px 20px;
+    }
+    &--green{
+        border-color: $main-color;
+        color: $main-color;
+        &:hover{
+            transition: .3s ease-in;
+            background-color: $main-color;
+            color: white;
+        }
+    }
+
+    &--transparent{
+        background-color: transparent;
+    }
+}

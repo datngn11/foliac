@@ -1,0 +1,66 @@
+.hero {
+    @include section-bg('../img/bg_hero.jpg');
+
+    &__slider {
+    }
+    
+    &__content {
+        position: relative;
+        text-align: center;
+        padding: 115px 0 180px;
+    }
+
+    &__title {
+        @include font-title(400);
+        margin: 0 0 15px;
+    }
+
+    &__subtitle {
+        @include font-subtitle(400);
+        margin: 0 0 42px;
+    }
+}
+
+.header {
+    @include flex-between();
+
+    padding: 35px 0;
+
+
+    .menu {
+        &__list {
+            @include list-res();
+            @include flex-between();
+        }
+
+        &__item {
+            position: relative;
+            margin-right: 115px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &+.menu__item::before {
+                content: '/';
+                color: $breadcrumbs;
+                position: absolute;
+                top: -5px;
+                left: -70px;
+                font-size: 26px;
+            }
+        }
+
+        &__link {
+            @include link-res;
+            @include font-base-white(700);
+            position: relative;
+
+            &:hover {
+                color: $main-color;
+                transition: .3s ease-in;
+            }
+        }
+
+    }
+}
