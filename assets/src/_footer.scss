@@ -10,6 +10,10 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
+            transition: 0.4s ease-in-out;
+            &:hover {
+                color: $main-color;
+            }
         }
     }
 }

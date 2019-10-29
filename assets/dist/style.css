@@ -306,7 +306,10 @@
     .footer .copyright__link {
       color: white;
       text-decoration: none;
-      font-weight: bold; }
+      font-weight: bold;
+      transition: 0.4s ease-in-out; }
+      .footer .copyright__link:hover {
+        color: #48bf72; }
 
 .social__list {
   list-style: none;
@@ -324,12 +327,14 @@
   text-decoration: none;
   font-size: 16px;
   color: #ffffff; }
-  .social__link:hover {
-    color: #48bf72; }
+  .social__link:hover .social__icon-bg {
+    fill: #48bf72; }
 
 .social__icon {
   width: 50px;
   height: 55px; }
+  .social__icon-bg {
+    transition: fill 0.4s ease-in-out; }
 
 html,
 body {
