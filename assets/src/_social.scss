@@ -1,0 +1,25 @@
+.social {
+    &__list {
+        @include list-res;
+        font-size: 0;
+    }
+    &__item {
+        display: inline-block;
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+    }
+    &__link {
+        background-color: transparent;
+        text-decoration: none;
+        font-size: 16px;
+        color: #ffffff;
+        &:hover {
+            color: $main-color;
+        }
+    }
+    &__icon {
+        width: 50px;
+        height: 55px;
+    }
+}

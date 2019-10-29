@@ -1,0 +1,15 @@
+.footer {
+    background-color: $alt-color;
+    padding: 75px 0;
+    .copyright {
+        font-family: Lato, sans-serif;
+        &__text {
+            color: white;
+        }
+        &__link {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    }
+}

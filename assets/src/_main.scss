@@ -1,0 +1,109 @@
+.portfolio {
+    padding: 50px 0;
+    .filter {
+        margin: 0 auto 50px;
+        text-align: center;
+        font-size: 0;
+
+        &__item {
+            @include font-base-dark(700);
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: $filter-btn;
+            border-radius: 2px;
+            text-align: center;
+            transition: 0.3s ease-in-out;
+            border: none;
+            outline: none;
+            appearance: none;
+            -webkit-appearance: none;
+            cursor: pointer;
+
+            &:hover,
+            &--active {
+                background-color: $main-color;
+                color: white;
+            }
+            &:not(:last-of-type) {
+                margin-right: 15px;
+            }
+        }
+    }
+    .works {
+        margin: 0 auto;
+        min-height: 830px;
+        .grid-sizer {
+            width: 20%;
+        }
+
+        &__item {
+            box-sizing: border-box;
+            margin-bottom: 40px;
+            &--2-5 {
+                width: 40%;
+                // width: calc(450 / 1140 * 100%);
+            }
+            &--3-5 {
+                width: 60%;
+                // width: calc(650 / 1140 * 100%);
+            }
+            &:nth-child(2n) {
+                padding-right: 6px;
+            }
+            &:nth-child(2n + 3) {
+                padding-left: 34px;
+            }
+        }
+
+        &__link {
+            display: block;
+            text-decoration: none;
+            position: relative;
+        }
+        &__img {
+            border-radius: 2px;
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        &__overlay {
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            background: $main-color;
+            border-radius: 8px;
+            transition: opacity 0.3s ease-in-out;
+            &:focus,
+            &:hover {
+                opacity: 0.9;
+            }
+            &-body {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+                flex-basis: 100%;
+                font-family: Lato, sans-serif;
+                color: white;
+            }
+            &-heading {
+                font-size: 30px;
+                font-weight: bold;
+                margin: 0 0 15px;
+            }
+            &-desc {
+                margin: 0;
+            }
+        }
+    }
+}

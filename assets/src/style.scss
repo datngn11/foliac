@@ -1,8 +1,17 @@
-@import 'variables';
-@import 'mixins';
-@import 'fonts';
+@import "variables";
+@import "mixins";
+@import "fonts";
 // @import 'common';
-@import 'components';
-@import 'hero';
-// @import 'main';
-// @import 'footer';
+@import "components";
+@import "hero";
+@import "main";
+@import "about";
+@import "contact";
+@import "form";
+@import 'footer';
+@import 'social';
+
+html,
+body {
+    background: #f9f9f9;
+}

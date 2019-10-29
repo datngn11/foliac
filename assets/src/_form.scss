@@ -1,0 +1,66 @@
+.form {
+    width: calc(700 / 1140 * 100%);
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 0;
+    &__message {
+        resize: none;
+    }
+    &__label {
+        position: relative;
+        box-sizing: border-box;
+        display: inline-block;
+        padding: 0 0 0 50px;
+        width: calc(50% - 19px);
+        border-radius: 3px;
+        background-color: $alt-color;
+        background-repeat: no-repeat;
+        border: 2px solid $alt-color;
+        font-size: 16px;
+        &--indent {
+            margin-right: 30px;
+        }
+        &--large {
+            width: calc(100% - 4px);
+        }
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 18px;
+            left: 40px;
+            width: 15px;
+            height: 15px;
+            background: $alt-color;
+            transform: rotate(45deg);
+        }
+
+        & > * {
+            display: block;
+            box-sizing: border-box;
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 17px 25px;
+        }
+        &--name {
+            background-image: url(../img/icons/user.svg);
+            background-position: 14px 14px;
+        }
+        &--email {
+            background-image: url(../img/icons/mail.svg);
+            background-position: 14px 17px;
+        }
+        &--message {
+            background-image: url(../img/icons/crayon.svg);
+            background-position: 14px 17px;
+        }
+    }
+    & > *::placeholder {
+        color: #a6a5a5;
+        font-family: Lato;
+    }
+}

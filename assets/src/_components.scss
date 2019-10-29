@@ -1,32 +1,64 @@
-.container{
+.container {
     @include scr-min(1280px) {
-        width: 1140px;
+        width: 1170px;
     }
+    width: 100%;
     margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+
+    &--footer {
+        @include flex-between();
+    }
 }
 
-.btn{
+.btn {
     @include link-res;
     @include font-base-white(700);
     font-size: 14px;
     text-transform: uppercase;
     border-radius: 3px;
-    border: 2px solid;
+    border: 2px solid transparent;
     display: inline-block;
-    &--small{
+    transition: 0.4s ease-in-out;
+    background-color: $main-color;
+    cursor: pointer;
+    &:hover {
+        background-color: transparent;
+        @extend .btn--green;
+    }
+    &--small {
         padding: 10px 20px;
     }
-    &--green{
+    &--large {
+        padding: 15px 0;
+        width: 100%;
+        letter-spacing: 3.08px;
+    }
+    &--green {
         border-color: $main-color;
         color: $main-color;
-        &:hover{
-            transition: .3s ease-in;
+    }
+    &--dark {
+        color: $alt-color;
+        border-color: $alt-color;
+    }
+    &--transparent {
+        background-color: transparent;
+        &:hover {
             background-color: $main-color;
             color: white;
+            border-color: $main-color;
         }
     }
-
-    &--transparent{
-        background-color: transparent;
+}
+.section-heading {
+    @include font-title(400);
+    font-size: 26px;
+    color: $main-color;
+    text-align: center;
+    margin: 0;
+    &--contact {
+        margin-bottom: 50px;
     }
 }

@@ -1,8 +1,5 @@
 .hero {
     @include section-bg('../img/bg_hero.jpg');
-
-    &__slider {
-    }
     
     &__content {
         position: relative;

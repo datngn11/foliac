@@ -1,0 +1,24 @@
+.about {
+    @include section-bg("../img/bg_about.jpg");
+    padding: 90px 0;
+    &__body {
+        width: calc(425 / 1140 * 100%);
+        margin-left: calc(715 / 1140 * 100%);
+        color: #ffffff;
+        font-family: Lato, sans-serif;
+    }
+    &__name {
+        margin: 0 0 5px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    &__position {
+        display: inline-block;
+        font-size: 22px;
+        margin: 0 0 35px;
+    }
+    &__text {
+        margin: 0 0 40px;
+        line-height: 25px;
+    }
+}
